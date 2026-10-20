@@ -136,6 +136,28 @@
                         break;
                     }
 
+                case 5:
+                    {
+                        Student student1 = new Student("Вася", [3, 4, 5]);
+                        Student student2 = new Student("Максим");
+                        Console.WriteLine(student1);
+                        Console.WriteLine(student2);
+
+                        Pause();
+                        break;
+                    }
+
+                case 6:
+                    {
+                        Student student1 = new Student("Вася", [3, 4, 5, 4]);
+                        Student student2 = new Student("Петя", [5, 5, 5, 5]);
+                        Console.WriteLine(student1 + $", Средний балл: {student1.AverageGrade()}, {student1.Astudent()}");
+                        Console.WriteLine(student2 + $", Средний балл: {student2.AverageGrade()}, {student2.Astudent()}");
+
+                        Pause();
+                        break;
+                    }
+
                 case 0:
                     Console.WriteLine("Выход из программы.");
                     break;
