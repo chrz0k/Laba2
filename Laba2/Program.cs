@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿namespace Laba2;
+
+internal class Program
 {
     public static void Pause()
     {
@@ -15,7 +17,7 @@
         while (choice != 0)
         {
             Console.Clear();
-            Console.WriteLine("=== Лабораторная работа №1 ===");
+            Console.WriteLine("=== Лабораторная работа №2 ===");
             Console.WriteLine(" 0) Выход из программы");
 
             Console.WriteLine(" 1) 1.1. Точка координат");
@@ -56,7 +58,7 @@
                 case 2:
                     {
                         Console.WriteLine("Третья линия это начало в начале линии 1" +
-                            " и конец в конце линни 2:");
+                            " и конец в конце линии 2:");
                         Point point1 = new Point(1, 3);
                         Point point2 = new Point(23, 8);
                         Line line1 = new Line(point1, point2);
@@ -110,12 +112,12 @@
 
                         Console.WriteLine("\nПосле создания Андрея и копирования ему оценок Васи:");
                         Student student3 = new Student("Андрей");
-                        student3.Grades = student1.Grades;
+                        student3.Grades = (int[])student1.Grades.Clone();
                         Console.WriteLine(student1);
                         Console.WriteLine(student3);
 
                         Console.WriteLine("\nИзменение оценок Васи не влияет на Андрея:");
-                        student1.Grades = [3, 4, 2];
+                        student1.Grades[0] = 2;
                         Console.WriteLine(student1);
                         Console.WriteLine(student3);
 
@@ -151,8 +153,30 @@
                     {
                         Student student1 = new Student("Вася", [3, 4, 5, 4]);
                         Student student2 = new Student("Петя", [5, 5, 5, 5]);
-                        Console.WriteLine(student1 + $", Средний балл: {student1.AverageGrade()}, {student1.Astudent()}");
-                        Console.WriteLine(student2 + $", Средний балл: {student2.AverageGrade()}, {student2.Astudent()}");
+
+                        Console.Write(student1);
+                        Console.Write($", Средний балл: {student1.AverageGrade()}");
+                        if (student1.IsExcellent())
+                        {
+                            Console.Write(", Студент является отличником");
+                        }
+                        else
+                        {
+                            Console.Write(", Студент не является отличником");
+                        }
+                        Console.WriteLine();
+
+                        Console.Write(student2);
+                        Console.Write($", Средний балл: {student2.AverageGrade()}");
+                        if (student2.IsExcellent())
+                        {
+                            Console.Write(", Студент является отличником");
+                        }
+                        else
+                        {
+                            Console.Write(", Студент не является отличником");
+                        }
+                        Console.WriteLine();
 
                         Pause();
                         break;
@@ -161,17 +185,7 @@
                 case 0:
                     Console.WriteLine("Выход из программы.");
                     break;
-
-                default:
-                    Console.WriteLine("Ошибка! Введено неверное значение.");
-                    Pause();
-                    break;
             }
-
-
-
-
-
         }
     }
 }

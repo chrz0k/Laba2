@@ -1,47 +1,49 @@
-﻿internal class Line
+﻿namespace Laba2;
+
+internal class Line
 {
-    private Point Start;
-    private Point End;
+    private Point start;
+    private Point end;
 
     public Line()
     {
-        Start = new Point(0, 0);
-        End = new Point(0, 0);
+        start = new Point(0, 0);
+        end = new Point(0, 0);
     }
 
     public Line(double a, double b, double c, double d)
     {
-        Start = new Point(a,b);
-        End = new Point(c,d);
+        start = new Point(a, b);
+        end = new Point(c, d);
     }
 
     public Line(Point point1, Point point2)
     {
-        Start = point1;
-        End = point2;
+        start = point1;
+        end = point2;
     }
 
     public Line(Line line)
     {
-        this.Start = line.Start;
-        this.End = line.End;
+        start = line.start;
+        end = line.end;
     }
 
     public Point StartPoint
     {
-        get { return Start; }
-        set { Start = value; }
+        get { return start; }
+        set { start = value; }
     }
 
     public Point EndPoint
     {
-        get { return End; }
-        set { End = value; }
+        get { return end; }
+        set { end = value; }
     }
 
     public override string ToString()
     {
-        string s = "Линия от " + Start + " до " + End;
+        string s = $"Линия от {start} до {end}";
         return s;
     }
 }

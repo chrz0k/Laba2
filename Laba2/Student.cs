@@ -1,35 +1,26 @@
-﻿internal class Student
+﻿namespace Laba2;
+
+internal class Student
 {
     private string name;
     private int[] grades;
 
     public Student(string name, params int[] grades)
     {
-        Name = name;
-        Grades = (grades != null) ? grades : new int[0];
+        this.name = name ?? "Default";
+        this.grades = grades ?? new int[0];
     }
 
     public string Name
     {
         get { return name; }
-        set
-        {
-            if (value != null)
-            {
-                name = value;
-            }
-            else
-            {
-                Console.WriteLine("Ошибка!");
-                name = "Default";
-            }
-        }
+        set { name = value ?? "Default"; }
     }
 
     public int[] Grades
     {
         get { return grades; }
-        set {  grades = value; }
+        set { grades = value ?? new int[0]; }
     }
 
     public double AverageGrade()
@@ -49,31 +40,22 @@
         return averageGrade;
     }
 
-    public string Astudent()
+    public bool IsExcellent()
     {
-        if (grades.Length <= 0)
+        if (grades.Length == 0)
         {
-            return "У студента нет оценок";
+            return false;
         }
 
-        bool flag = true;
-        for (int i = 0; i < grades.Length; i++)
+        foreach (int grade in grades)
         {
-            if (grades[i] < 5)
+            if (grade < 5)
             {
-                flag = false;
-                break;
+                return false;
             }
         }
 
-        if (flag == true)
-        {
-            return "Студент является отличником";
-        }
-        else
-        {
-            return "Студент не является отличником";
-        }
+        return true;
     }
 
     public override string ToString()

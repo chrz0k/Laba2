@@ -1,8 +1,10 @@
-﻿internal class Validator
+﻿namespace Laba2;
+
+internal class Validator
 {
-    public int ReadInt(string promt)
+    public int ReadInt(string prompt)
     {
-        Console.Write(promt);
+        Console.Write(prompt);
         while (true)
         {
             string? inputString = Console.ReadLine();
@@ -12,13 +14,13 @@
             }
 
             Console.WriteLine("Ошибка!");
-            Console.Write(promt);
+            Console.Write(prompt);
         }
     }
 
-    public int ReadInt(string promt, int min, int max)
+    public int ReadInt(string prompt, int min, int max)
     {
-        Console.Write(promt);
+        Console.Write(prompt);
         while (true)
         {
             string? inputString = Console.ReadLine();
@@ -31,13 +33,13 @@
             }
 
             Console.WriteLine("Ошибка!");
-            Console.Write(promt);
+            Console.Write(prompt);
         }
     }
 
-    public double ReadDouble(string promt)
+    public double ReadDouble(string prompt)
     {
-        Console.Write(promt);
+        Console.Write(prompt);
         while (true)
         {
             string? inputString = Console.ReadLine();
@@ -47,13 +49,13 @@
             }
 
             Console.WriteLine("Ошибка!");
-            Console.Write(promt);
+            Console.Write(prompt);
         }
     }
 
-    public double ReadDouble(string promt, double min, double max)
+    public double ReadDouble(string prompt, double min, double max)
     {
-        Console.Write(promt);
+        Console.Write(prompt);
         while (true)
         {
             string? inputString = Console.ReadLine();
@@ -66,13 +68,13 @@
             }
 
             Console.WriteLine("Ошибка!");
-            Console.Write(promt);
+            Console.Write(prompt);
         }
     }
 
-    public int ReadChar(string promt)
+    public char ReadChar(string prompt)
     {
-        Console.Write(promt);
+        Console.Write(prompt);
         while (true)
         {
             string? inputString = Console.ReadLine();
@@ -82,8 +84,7 @@
             }
 
             Console.WriteLine("Ошибка!");
-            Console.Write(promt);
+            Console.Write(prompt);
         }
     }
-
 }

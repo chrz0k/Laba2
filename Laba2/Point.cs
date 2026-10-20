@@ -1,4 +1,6 @@
-﻿internal class Point
+﻿namespace Laba2;
+
+internal class Point
 {
     private double x;
     private double y;
@@ -23,7 +25,7 @@
 
     public override string ToString()
     {
-        string s = "{" + x + ";" + y + "}";
+        string s = $"{{{x};{y}}}";
         return s;
     }
 }
