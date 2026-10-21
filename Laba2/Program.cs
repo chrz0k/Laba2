@@ -130,9 +130,9 @@ internal class Program
                         Point point1 = new Point(3, 5);
                         Point point2 = new Point(25, 6);
                         Point point3 = new Point(7, 8);
-                        Console.WriteLine(point1);
-                        Console.WriteLine(point2);
-                        Console.WriteLine(point3);
+                        Console.WriteLine($"Точка1 : {point1}");
+                        Console.WriteLine($"Точка2 : {point2}");
+                        Console.WriteLine($"Точка3 : {point3}");
 
                         Pause();
                         break;
