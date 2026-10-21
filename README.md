@@ -1,4 +1,4 @@
-<img width="374" height="345" alt="image" src="https://github.com/user-attachments/assets/32ed140c-8b35-4ef1-9178-b44c9a5dfc6d" /># Распопов Егор ИТ-12 Лабораторная №2
+# Распопов Егор ИТ-12 Лабораторная №1
 
 # Задание 1
 
